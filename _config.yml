@@ -1,8 +1,14 @@
-title: Just the Docs Template
+title: Helix Bridge Docs
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://helixbridge.app/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  HelixBridge: https://helixbridge.app/
+  # Github: https://github.com/helix-bridge/helix-docs
+
+callouts:
+  note:
+    title: Note
+    color: yellow
