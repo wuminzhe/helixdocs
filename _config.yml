@@ -5,8 +5,7 @@ theme: just-the-docs
 url: https://helixbridge.app/
 
 aux_links:
-  HelixBridge: https://helixbridge.app/
-  # Github: https://github.com/helix-bridge/helix-docs
+  Docs Repo: https://github.com/helix-bridge/helix-docs
 
 callouts:
   note:

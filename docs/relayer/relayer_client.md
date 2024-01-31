@@ -1,10 +1,11 @@
 ---
-group:
-  title: 🔹 Relayer
-  order: 5
-order: 2
-title: Client
+title: Relayer Client
+layout: default
+parent: Relayer
+nav_order: 2
 ---
+
+# Relayer Client
 
 Helix has open-sourced a JavaScript client, and you can find more information about it on their [GitHub](https://github.com/helix-bridge/relayer) repository. For specific configuration and deployment instructions, please refer to the README file in the repository. The README typically contains detailed guidelines on how to set up and use the client effectively.
 

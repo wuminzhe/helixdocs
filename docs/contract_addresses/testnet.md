@@ -1,8 +1,8 @@
 ---
-group:
-  title: 🔹 Contract Addresses
-  order: 3
-order: 1
+layout: default
+title: Testnet
+parent: Contract Addresses
+nav_order: 2
 ---
 
 ## Ethereum Sepolia

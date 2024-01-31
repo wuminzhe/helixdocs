@@ -1,8 +1,8 @@
 ---
-group:
-  title: 🔹 Contract Addresses
-  order: 3
-order: 1
+layout: default
+title: Mainnet
+parent: Contract Addresses
+nav_order: 1
 ---
 
 ## Ethereum

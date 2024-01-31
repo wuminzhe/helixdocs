@@ -1,10 +1,11 @@
 ---
-group:
-  title: 🔹 Relayer
-  order: 5
-order: 1
-title: Indexer
+title: Relayer Indexer
+layout: default
+parent: Relayer
+nav_order: 1
 ---
+
+# Relayer Indexer
 
 Before we can understand and try to run a relay, we should first understand the index of the helix. Because relayer relies heavily on and trusts the indexed data, the index is very important to the proper functioning and security of relayer.
 

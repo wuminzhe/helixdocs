@@ -1,10 +1,11 @@
 ---
-group:
-  title: 🔹 Relayer
-  order: 5
-order: 3
 title: Run a Relayer Node(V2)
+layout: default
+parent: Relayer
+nav_order: 2
 ---
+
+# Run a Relayer Node(V2)
 
 ## Overview
 
@@ -27,21 +28,21 @@ Open the Helix UI and navigate to the [Relayer Dashboard](https://testnet.helixb
 - **(1/3) Select Chain and Token**
 
   Choose the source chain as `arbitrum-sepolia`, the target chain as `sepolia`, and the Token as `USDC`. Click **Confirm** and the page will provide basic information about the bridge you are about to register. Here, you can find the bridge type is Opposite. Click **Next** to proceed.
-  :::info{title=BridgeType}
+
+  {: .note }
   For LnBridge V2, there are only two types: Default and Opposite. The difference between these two types lies in the location of the Relayer's staked collateral. In Default type, the collateral is staked on the target chain, while in Opposite type, the collateral is staked on the source chain.
-  :::
 
 - **(2/3) Deposit Collateral & Set Fees**
 
   - Enter the desired amount of collateral and click **Confirm**. Subsequently, a wallet confirmation prompt will appear (this transaction is executed on the target chain). If your wallet is not currently connected to the target chain, you will be prompted to switch to the target chain before proceeding with the collateral pledge.
-    :::info{title=Collateral}
+
+    {: .note }
     Helix does not impose any restrictions on the amount of collateral that a Relayer can stake; it is entirely specified by the Relayer. The more collateral pledged, the better the depth available for each transfer. However, it's important to note that higher collateral amounts correspond to increased pledge costs for the Relayer.
-    :::
 
   - Entering the baseFee and liquidityFee rate. Click **Confirm**, and a wallet confirmation prompt will appear afterward(this transaction is executed on the source chain).
-    :::info{title=Fee}
+
+    {: .note }
     The Relayer's final income per transfer is calculated as the `baseFee + liquidityFeeRate * Amount`, where Amount is the transfer amount.
-    :::
 
 - **(3/3) Approve**
 
@@ -49,7 +50,7 @@ Open the Helix UI and navigate to the [Relayer Dashboard](https://testnet.helixb
 
 After completing the registration, you can open the `Manage` tab to view the registered information. You will notice that the status of the relayer is `Offline` because you have not ye started the relayer client. Please note that there may be some delay in the synchronization of registration information.
 
-<img src="/register.gif" style="width:90%; height:30%; text-align:middle; margin-left:5%; margin-right:5%">
+<img src="https://docs.helixbridge.app/register.gif" style="width:100%;">
 
 ## Run the client
 
@@ -118,16 +119,17 @@ The configuration information for the Relayer is stored in the file `.maintain/c
   - **fromChain** and **toChain**: Must match the names defined in fileld **chains**
   - **sourceBridge** and **targetBridge**: Representing the addresses of the Helix LnBridgeV2 contract (can be queried in section [Contract Address](https://docs.helixbridge.app/helixbridge/testnet))
   - **encryptedPrivateKey**: It's the relayer's encrypted private key, corresponding to the account registered during registration
-    :::info{title=EncryptPrivateKey}
+
+    {: .note }
     Execute the command `yarn crypto`. Follow the prompts to input your password and private key. After pressing Enter, it will print the private key encrypted with the provided password. Then replace the `<ENCRYPTED_PRIVATEKEY>` in the configuration file with the encrypted private key obtained.
-    :::
+
   - **feeLimit**: Controls the maximum cost of a relay operation, protecting the relayer from excessive gas fees
   - **reorgThreshold**: It's an assumption about the block confirmation of transactions initiated by users on the source chain – the larger, the safer
   - **bridgeType**: Indicates the type of bridge, currently taking values of `lnv2-default`, `lnv2-opposite`, and `lnv3`, consistent with the type displayed during relayer registration
   - **providers**: List the addresses of token pairs on the source and target chains, as well as the exchange rate for the native token on the target chain.
-    :::info{title=swapRate}
+
+    {: .note }
     The swapRate is the conversion rate from the native token on the target chain to the transfer token. For example, the native token on Ethereum is ETH, and the token to be transferred is USDC, the conversion rate might be approximately 2500 at 16/01/2024. As prices fluctuate, the Relayer needs to periodically adjust this ratio.
-    :::
 
 ### Install & Run
 

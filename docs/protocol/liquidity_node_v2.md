@@ -1,9 +1,9 @@
 ---
 title: Liquidity Node Protocol V2
 layout: default
+parent: Protocol
 nav_order: 1
 ---
-
 
 # Liquidity Node Protocol V2
 

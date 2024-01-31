@@ -1,6 +1,7 @@
 ---
 title: xToken Protocol
 layout: default
+parent: Protocol
 nav_order: 3
 ---
 
@@ -23,7 +24,7 @@ xToken plays an essential role in Helix's business by hosting user assets and fa
 
 The CBA Model involves deploying the Backing module on the source chain and the Issuing module on the target chain. The asset registration and issuance process is completed through underlying calls to the generic cross-chain messaging channel.
 
-<img src="/cba01.png" style="width:70%; height:70%; text-align:middle; margin-left:15%; margin-right:15%">
+<img src="https://docs.helixbridge.app/cba01.png" style="width:70%; height:70%; text-align:middle; margin-left:15%; margin-right:15%">
 
 - **Backing**  
   Deployed on the source chain, the Backing module locks user tokens. Backing generates locking proofs, and the tokens are held in Backing as collateral for asset issuance mapping on the target chain. These tokens remain locked until a user initiates a reverse redemption operation, at which point they are unlocked and returned to the user's account.
@@ -33,7 +34,7 @@ The CBA Model involves deploying the Backing module on the source chain and the 
 
 ## Protocol
 
-<img src="/mapping_token.svg" style="width:70%; height:70%; text-align:middle; margin-left:15%; margin-right:15%">
+<img src="https://docs.helixbridge.app/mapping_token.svg" style="width:70%; height:70%; text-align:middle; margin-left:15%; margin-right:15%">
 
 - **Asset registration**  
   Asset registration is the process of registering the original token with the Backing module on the source chain and mapping it to the corresponding mapping token on the target chain. This involves calling the Backing module to provide meta information about the original token, and the message relayer relays this information to the Issuing module on the target chain to create the corresponding mapping token.
