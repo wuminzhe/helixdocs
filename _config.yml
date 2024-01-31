@@ -1,8 +1,8 @@
-title: Helix Bridge Docs
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Helix Bridge Doc
+description: The documentation of Helix Bridge
 theme: just-the-docs
 
-url: https://helixbridge.app/
+url: https://wuminzhe.github.io/helixdocs
 
 aux_links:
   Docs Repo: https://github.com/helix-bridge/helix-docs
