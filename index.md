@@ -7,7 +7,7 @@ nav_order: 0
 # Helix Bridge
 {: .fs-9 }
 
-is a fully open-source and decentralized cross-chain asset bridge. It's built on top of common messaging bridges that already exist between chains, and provides secure, fast, and low-cost cross-chain functionality for users.
+Helix Bridge is a fully open-source and decentralized cross-chain asset bridge. It's built on top of common messaging bridges that already exist between chains, and provides secure, fast, and low-cost cross-chain functionality for users.
 {: .fs-6 .fw-300 }
 
 [Get started now](https://helixbridge.app/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
